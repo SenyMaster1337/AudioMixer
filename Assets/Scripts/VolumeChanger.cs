@@ -5,25 +5,17 @@ public class VolumeChanger : MonoBehaviour
 {
     [SerializeField] private AudioMixer _audioMixer;
 
-    private int _valueChange = 20;
+    private float _valueChange = 20f;
+    private float _minVolume = 0.0001f;
 
-    public void ChangeMasterVolume(float volume)
+    public void ChangeVolume(string nameGroup, float volume)
     {
-        ChangeVolume("MasterVolume", volume);
+        float volumeDB = ConvertLinearToDecibels(volume);
+        _audioMixer.SetFloat(nameGroup, volumeDB);
     }
 
-    public void ChangeMusicVolume(float volume)
+    private float ConvertLinearToDecibels(float linearVolume)
     {
-        ChangeVolume("MusicVolume", volume);
-    }
-
-    public void ChangeEffectVolume(float volume)
-    {
-        ChangeVolume("EffectVolume", volume);
-    }
-
-    private void ChangeVolume(string nameSound, float volume)
-    {
-        _audioMixer.SetFloat(nameSound, Mathf.Log10(volume) * _valueChange);
+        return Mathf.Log10(Mathf.Max(linearVolume, _minVolume)) * _valueChange;
     }
 }
