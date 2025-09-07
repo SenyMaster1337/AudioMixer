@@ -2480,11 +2480,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1085914097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c6d4855a99b564697b3b54d9b1ea4a, type: 3}
+  m_Script: {fileID: 11500000, guid: e0a95ca80e3db914ea7dbdb611f403a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _slider: {fileID: 1085914099}
   _volumeChanger: {fileID: 807577980}
+  _volumeName: MasterVolume
 --- !u!1 &1093231538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,6 +2729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slider: {fileID: 1195481028}
   _volumeChanger: {fileID: 807577980}
+  _volumeName: EffectVolume
 --- !u!1 &1199411643
 GameObject:
   m_ObjectHideFlags: 0
@@ -3255,11 +3257,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1620049490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2067ab19ca1223d41882cd7c8f136ad8, type: 3}
+  m_Script: {fileID: 11500000, guid: e0a95ca80e3db914ea7dbdb611f403a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _slider: {fileID: 1620049492}
   _volumeChanger: {fileID: 807577980}
+  _volumeName: MusicVolume
 --- !u!1 &1755509823
 GameObject:
   m_ObjectHideFlags: 0
